@@ -53,9 +53,9 @@ async def send_for_index(client, message):
     try:
         await client.get_chat(chat_id)
     except ChannelInvalid:
-        return await message.reply('This may be a private channel / group. Make me an admin over there to index the files.')
+        return await message.reply('Tʜɪs ᴍᴀʏ ʙᴇ ᴀ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀɴɴᴇʟ / ɢʀᴏᴜᴘ. Mᴀᴋᴇ ᴍᴇ ᴀɴ ᴀᴅᴍɪɴ ᴏᴠᴇʀ ᴛʜᴇʀᴇ ᴛᴏ ɪɴᴅᴇx ᴛʜᴇ ғɪʟᴇs. 😶')
     except (UsernameInvalid, UsernameNotModified):
-        return await message.reply('Invalid Link specified.')
+        return await message.reply('Iɴᴠᴀʟɪᴅ Lɪɴᴋ 😶‍🌫️')
     except Exception as e:
         logger.exception(e)
         return await message.reply(f'Errors - {e}')
@@ -307,7 +307,7 @@ async def reset_caption(client: Midukki_RoboT, message: message()):
                 await sts.edit("Make sure iam present in your group..!", quote=True)
                 return
         else:
-            await sts.edit("iam not connect any group..!", quote=True)
+            await sts.edit("I am not connect any group..!", quote=True)
             return
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
@@ -682,7 +682,7 @@ async def get_result_file(client, query):
             )
             await query.answer('Check PM, I have sent files in pm', show_alert=True)
     except UserIsBlocked:
-        await query.answer('Unblock the bot mahn !', show_alert=True)
+        await query.answer('Uɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴍᴀʜɴ !😵‍💫', show_alert=True)
     except PeerIdInvalid:
         await query.answer(url=f"https://t.me/{Bots.BOT_USERNAME}?start=Midukki_-_{file_id}")
     except Exception as e:
@@ -839,7 +839,7 @@ async def auto_filters(client: Midukki_RoboT, message: message()):
                     [
                         button()
                             (
-                                "🤖 Check My Pm 🤖",
+                                "🤖 𝙲𝙷𝙴𝙲𝙺 𝙼𝚈 𝙿𝙼 🤖",
                                     url=f"https://telegram.dog/{Bots.BOT_USERNAME}"
                             )
                     ]
